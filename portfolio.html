@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>나의 포트폴리오</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- <link rel="stylesheet" href="../satner-master/vendors/linericon/style.css"> -->
+    <!-- <link rel="stylesheet" href="../satner-master/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="../satner-master/vendors/owl-carousel/owl.carousel.min.css"> -->
+    <!-- <link rel="stylesheet" href="../satner-master/css/magnific-popup.css"> -->
+    <!-- <link rel="stylesheet" href="../satner-master/vendors/nice-select/css/nice-select.css"> -->
+</head>
+
+<body>
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="home_logo" href="index.html">
+                        <h3 class="text-uppercase" id="subject_logo">작품</h3>
+                    </a>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav justify-content-end">
+                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">내 소개</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">포트폴리오</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="portfolio.html?subject=java">Java</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="portfolio.html?subject=android">Android</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="portfolio.html?subject=php">PHP</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">갤러리</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://github.com/choidongkyu">MY GITHUB</a>
+                            <li class="nav-item"><a class="nav-link" href="#">로그인</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="" alt="" id="left_img">
+                        </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-5">
+                        <div class="portfolio_right_text mt-30">
+                            <h1 class="text-uppercase" id="title"></h1>
+                            <br><br>
+                            <p id="contents">
+                            </p>
+                            <ul class="list">
+                                <li><span>개발환경</span>:&nbsp;<span id="dev_env"></span></li>
+                                <li><span>개발언어</span>:&nbsp;<span id="dev_lang"></span></li>
+                                <li><span>서버</span>:&nbsp;<span id="dev_server"></span></li>
+                                <li><span>내용</span> </li>
+                                <p id="sub_contents"></p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="test-title">시연 영상</h2>
+                <div class="row justify-content-center" id="video_container">
+                </div>
+                <!-- <form action="upload.php" method="post" enctype="multipart/form-data"
+                    onsubmit="return formSubmit(this);" name="videoForm" target="_self">
+                    <input type="file" name="upfile" id="upfile">
+                    <br>
+                    <input type="submit" value="동영상 올리기">
+                </form> -->
+                <input type="file" name="upfile" id="upfile">
+                <br>
+                <button onclick="uploadFile();">동영상 올리기</button>
+            </div>
+        </div>
+    </section>
+    <!--================End Portfolio Details Area =================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/portfolio.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

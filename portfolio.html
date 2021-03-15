@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <!-- <link rel="stylesheet" href="../satner-master/vendors/linericon/style.css"> -->
     <!-- <link rel="stylesheet" href="../satner-master/css/font-awesome.min.css"> -->
     <!-- <link rel="stylesheet" href="../satner-master/vendors/owl-carousel/owl.carousel.min.css"> -->
@@ -42,7 +44,7 @@
                             </li>
                             <li class="nav-item"><a class="nav-link" href="#">갤러리</a></li>
                             <li class="nav-item"><a class="nav-link" href="https://github.com/choidongkyu">MY GITHUB</a>
-                            <li class="nav-item"><a class="nav-link" href="#">로그인</a>
+                            <li class="nav-item"><a class="nav-link" id="i_login_menu" href="login.html">로그인</a>
                             </li>
                         </ul>
                     </div>
@@ -79,20 +81,13 @@
                 <h2 class="test-title">시연 영상</h2>
                 <div class="row justify-content-center" id="video_container">
                 </div>
-                <!-- <form action="upload.php" method="post" enctype="multipart/form-data"
-                    onsubmit="return formSubmit(this);" name="videoForm" target="_self">
-                    <input type="file" name="upfile" id="upfile">
-                    <br>
-                    <input type="submit" value="동영상 올리기">
-                </form> -->
                 <input type="file" name="upfile" id="upfile">
                 <br>
-                <button onclick="uploadFile();">동영상 올리기</button>
+                <button onclick="uploadFile();" id="i_upload_btn">동영상 올리기</button>
             </div>
         </div>
     </section>
     <!--================End Portfolio Details Area =================-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/util.js"></script>
     <script src="./js/portfolio.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

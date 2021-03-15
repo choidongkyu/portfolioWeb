@@ -707,3 +707,162 @@ a:focus {
 .contact_form .form-group textarea.form-control {
   height: 134px;
 }
+
+/* 로그인 화면 css */
+.login-form {
+  display: block;
+  width: 300px;
+  background-color: #EEEFF1;
+  margin-right: auto;
+  margin-left: auto;
+  /* margin-top: 100px; */
+  /* padding-top: 75px; */
+  padding: 20px;
+  text-align: center;
+  border: none;
+}
+
+.text-field {
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  width: 260px;
+  margin-bottom: 10px;
+
+}
+
+.login-btn {
+  font-size: 14px;
+  border: none;
+  padding: 10px;
+  width: 260px;
+  background-color: #6779dd;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.links {
+  text-align: center;
+}
+
+.links a {
+  font-size: 12px;
+  color: #9B9B9B;
+}
+
+
+/* 회원가입 css */
+.c_input_info_main {
+  display: flex;
+  justify-content: center;
+}
+
+.c_input_info_title_wrapper h1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  size: 2rem;
+  font-family: 'SourceHanSansKR';
+  font-size: 2rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.c_signup_err_msg_wrapper .item_wrapper {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+.c_signup_err_msg_wrapper .item_wrapper h5 {
+  flex: 1;
+  text-align: left;
+  display: block;
+  font-size: 0.83em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.c_signup_err_msg_wrapper .item_wrapper div {
+  height: 1rem;
+  font-size: 0.8rem;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #111111;
+}
+
+.c_signup_err_msg_wrapper {
+  margin-right: 90px;
+}
+
+.c_sign_up_form {
+  width: 35rem;
+  height: 2rem;
+  object-fit: contain;
+  border-radius: 5px;
+  border: solid 1px #d3d7dc;
+  background-color: #fafbfc;
+  border-width: 0.1rem;
+  position: relative;
+}
+
+.c_sign_up_form_input_div {
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+  margin: 0;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.c_sign_up_form_btn_check_id {
+  width: 5rem;
+  height: 2.1rem;
+  border-radius: 5px;
+  border: transparent;
+  background-color: #6779dd;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+  margin-left: 0.2rem;
+}
+
+.c_sign_up_form_btn2 {
+  width: 35rem;
+  height: 3rem;
+  object-fit: contain;
+  border-radius: 5px;
+  background-color: #6779dd;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-top: 1rem;
+  outline: none;
+}

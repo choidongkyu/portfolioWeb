@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>회원가입</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="home_logo" href="index.html">
+                        <img src='image/portfolio.png' />
+                    </a>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav justify-content-end">
+                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">내 소개</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">포트폴리오</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="portfolio.html?subject=java">Java</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="portfolio.html?subject=android">Android</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="portfolio.html?subject=php">PHP</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">갤러리</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://github.com/choidongkyu">MY GITHUB</a>
+                            <li class="nav-item"><a class="nav-link" id="i_login_menu" href="login.html">로그인</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="section_gap c_input_info_main">
+        <section class="c_input_info_wrapper">
+            <div class="c_input_info_title_wrapper">
+                <h1>회원가입</h1>
+            </div>
+            <!-- 입력양식칸 1. 아이디 -->
+            <article class="c_sign_up_form_input_div">
+                <div class="c_signup_err_msg_wrapper">
+                    <div class="item_wrapper">
+                        <h5>아이디</h5>
+                        <div id="i_input_err_id"></div>
+                    </div>
+                </div>
+                <input type="text" id="i_sign_up_id" class="c_sign_up_form" name="" value="" maxlength="20"
+                    tabindex="0">
+
+            </article>
+            <!-- 입력양식칸 2. 이메일(이메일 입력창과 이메일 인증버튼 영역을 포함한다.)   -->
+            <article class="c_sign_up_form_input_div">
+                <!-- 정규식 검사 결과 메시지 띠우는 div -->
+                <div class="c_signup_err_msg_wrapper">
+                    <div class="item_wrapper">
+                        <h5>이메일</h5>
+                        <div class="c_input_err_email" id="i_input_err_email"></div>
+                    </div>
+                </div>
+                <div class="form-group_confirm">
+                    <input type="text" id="i_sign_up_email" class="c_sign_up_form" name="n_sign_up_email"
+                        value="" tabindex="0">
+                </div>
+            </article>
+            <!-- 입력양식칸 3. 비밀번호   -->
+            <article class="c_sign_up_form_input_div">
+                <div class="c_signup_err_msg_wrapper">
+                    <div class="item_wrapper pw_wrapper">
+                        <h5>비밀번호</h5>
+                        <div id="i_input_err_pw"></div>
+                    </div>
+                </div>
+                <form method="POST">
+                    <input type="password" id="i_sign_up_pw" class="c_sign_up_form" name="" value="" autocomplete="off"
+                        maxlength="20" tabindex="0">
+                </form>
+            </article>
+            <!-- 입력양식칸 4. 비밀번호 확인 -->
+            <article class="c_sign_up_form_input_div">
+                <div class="c_signup_err_msg_wrapper">
+                    <div class="item_wrapper pw_wrapper">
+                        <h5>비밀번호 확인</h5>
+                        <div id="i_input_err_pw_check"></div>
+                    </div>
+                </div>
+                <form method="POST">
+                    <input type="password" id="i_sign_up_pw_check" class="c_sign_up_form" name="" value=""
+                        autocomplete="off" maxlength="20" tabindex="0">
+                </form>
+            </article>
+            <!-- '가입하기' 버튼 -->
+            <button type="input" name="button" class="c_sign_up_form_btn2" id="i_sign_up_submit_btn_renew" tabindex="0">
+                가입하기
+            </button>
+        </section>
+    </section>
+
+    <script src="./js/util.js"></script>
+    <script src="./js/signup.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

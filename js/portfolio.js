@@ -9,13 +9,11 @@ async function main() {
     const ajax_url = "/backend/portfolio.php";
     const ajax_type = "GET";
     const ajax_data = {
-        subject: subject
+        subject: subject,
     };
 
     //비동기 처리 위해 await 사용, 데이터 수신
     var result = await nv_ajax(ajax_url, ajax_type, ajax_data);
-
-
     //subject에 맞게 html 내용 변경
     const leftImage = document.getElementById("left_img");
     leftImage.src = result.image;
@@ -61,9 +59,13 @@ async function main() {
         videoContainer.appendChild(videoDiv);
     });
 
-    //video 업로드 후 새로고침 위해 video form action 변경
-    //document.videoForm.action = "backend/upload.php?subject=" + subject;
-    //document.videoForm.target = "index.html";
+    //관리자가 아닌경우 동영상 업로드를 못하도록 막음
+    const bIsAdmin = await isAdmin();
+    if(!bIsAdmin) {
+        $("#upfile").hide();
+        $("#i_upload_btn").hide();
+    }
+
 }
 
 

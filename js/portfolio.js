@@ -51,13 +51,15 @@ async function main() {
     subContents.innerText = result.subContents;
 
     //server에 있는 video 수대로 html 동적 생성
-    result.video.forEach(video => {
-        const videoDiv = document.createElement("div");
-        videoDiv.innerHTML = '<video class="video-fluid" src=/backend/' + video + ' width="500" height="500" controls>';
-        videoDiv.setAttribute("class", "col-md-6");
-        const videoContainer = document.getElementById("video_container");
-        videoContainer.appendChild(videoDiv);
-    });
+    if(result.video) {
+        result.video.forEach(video => {
+            const videoDiv = document.createElement("div");
+            videoDiv.innerHTML = '<video class="video-fluid" src=/backend/video/' + video.name + ' width="500" height="500" controls>';
+            videoDiv.setAttribute("class", "col-md-6");
+            const videoContainer = document.getElementById("video_container");
+            videoContainer.appendChild(videoDiv);
+        });
+    }
 
     //관리자가 아닌경우 동영상 업로드를 못하도록 막음
     const bIsAdmin = await isAdmin();
@@ -115,8 +117,10 @@ function uploadFile() {
 
     var _xml = new XMLHttpRequest();
     _xml.open('POST', '/backend/upload.php?subject=' + subject, true);
-    _xml.onload = function (event) {
-        if (_xml.status == 200) {
+    _xml.responseType = 'json';
+    _xml.onload = function () {
+        console.log(JSON.stringify(_xml.response));
+        if (_xml.response["retCode"] == 200) {
             alert('동영상이 업로드 되었습니다.');
             location.reload();
         } else {

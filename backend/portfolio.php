@@ -29,7 +29,21 @@
             $data["subContents"] = "";
         }
 
-        $data["video"] = glob('video/'.$_GET["subject"].'/*');
+        $db = mysqli_connect("127.0.0.1", "root", "Ddr7979556!", "portfolio");
+        if($db) {
+            $subject = $_GET["subject"];
+            //database 쿼리 시작       
+            $sql = "select name from t_video where subject='$subject'";
+            $res = $db->query($sql);
+            if($res){
+                while($row = mysqli_fetch_assoc($res)) {
+                    $data["video"][] = $row;
+                }
+            }
+            
+        }
+
+        //$data["video"] = glob('video/'.$_GET["subject"].'/*');
         //json 형태로 인코딩 후 클라이언트에 data 전달
         echo json_encode($data);
     }

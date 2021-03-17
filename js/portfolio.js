@@ -51,7 +51,7 @@ async function main() {
     subContents.innerText = result.subContents;
 
     //server에 있는 video 수대로 html 동적 생성
-    if(result.video) {
+    if (result.video) {
         result.video.forEach(video => {
             const videoDiv = document.createElement("div");
             videoDiv.innerHTML = '<video class="video-fluid" src=/backend/video/' + video.name + ' width="500" height="500" controls>';
@@ -62,8 +62,8 @@ async function main() {
     }
 
     //관리자가 아닌경우 동영상 업로드를 못하도록 막음
-    const bIsAdmin = await isAdmin();
-    if(!bIsAdmin) {
+    let user = await getUser();
+    if (user != "super") {
         $("#upfile").hide();
         $("#i_upload_btn").hide();
     }

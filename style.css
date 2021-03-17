@@ -800,10 +800,6 @@ a:focus {
   color: #111111;
 }
 
-.c_signup_err_msg_wrapper {
-  margin-right: 90px;
-}
-
 .c_sign_up_form {
   width: 35rem;
   height: 2rem;
@@ -820,7 +816,34 @@ a:focus {
   margin-bottom: 0.5rem;
 }
 
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
   margin: 0;
   margin-top: 0px;
   margin-right: 0px;
@@ -865,4 +888,37 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
   margin: 0 auto;
   margin-top: 1rem;
   outline: none;
+}
+
+#i_table {
+  text-align: center;
+  border: 1px solid #dddddd;
+}
+
+.th {
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+#i_text_content {
+  height: 350px;
+}
+
+#i_view_title {
+  width: 20%;
+}
+
+#i_view_content_2 {
+  height: 200px;
+  text-align: left;
+  
+}
+
+.btn-primary {
+  margin-right: 20px;
+}
+
+#i_free_board, #i_view_title_1, #i_view_title_2, #i_view_user_1, #i_view_user_2,
+#i_view_date_1, #i_view_date_2, #i_view_content_1{
+  text-align: center;
 }

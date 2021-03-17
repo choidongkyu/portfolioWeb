@@ -1,13 +1,13 @@
-$("#i_login_btn").click(async ()=> {
+$("#i_login_btn").click(async () => {
     const id = $("#i_login_id").val();
     const pw = $("#i_login_pw").val();
     //id를 입력하지 않았을 경우
-    if(!id) {
+    if (!id) {
         alert("아이디를 입력하세요");
         return;
     }
 
-    if(!pw) {
+    if (!pw) {
         alert("비밀번호를 입력하세요");
         return;
     }
@@ -22,9 +22,9 @@ $("#i_login_btn").click(async ()=> {
 
     //비동기 처리 위해 await 사용, 데이터 수신
     var result = await nv_ajax(ajax_url, ajax_type, ajax_data);
-    if(result['retCode'] == -1) {
+    if (result['retCode'] == -1) {
         alert("로그인 정보가 올바르지 않습니다.")
-    }else {
+    } else {
         location.href = "index.html"
     }
 })

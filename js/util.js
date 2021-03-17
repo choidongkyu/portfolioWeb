@@ -53,7 +53,7 @@ async function getSession() {
   }
 }
 //관리자 계정인지 확인하는 메소드
-async function isAdmin() {
+async function getUser() {
   //session이 존재하는지 서버에 요청
   const ajax_url = "/backend/session.php";
   const ajax_type = "GET";
@@ -64,12 +64,7 @@ async function isAdmin() {
   //비동기 처리 위해 await 사용, 데이터 수신
   var result = await nv_ajax(ajax_url, ajax_type, ajax_data);
   //관리자인 경우 result가 super로 옴
-  if (result['user'] == "super") {
-    return true;
-  } else {
-    return false;
-  }
-  //로그인이 되있을 경우
+  return result['user'];
 }
 
 async function sessionOut() {

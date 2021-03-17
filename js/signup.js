@@ -25,7 +25,7 @@ async function signUpRequest(ajax_data) {
             text: "회원가입에 성공하였습니다.",
             confirmButtonText: "확인"
         }).then((value) => {
-            if(value) {
+            if (value) {
                 location.href = "login.html"
             }
         })
@@ -64,7 +64,7 @@ async function idConformanceTest() {
     var result = await nv_ajax(ajax_url, ajax_type, ajax_data);
 
     //중복된 id가 있을 경우
-    if(result["retCode"] == -1) {
+    if (result["retCode"] == -1) {
         $("#i_input_err_id").css("color", "red");
         $("#i_input_err_id").text("중복되는 아이디 입니다.");
         return false;

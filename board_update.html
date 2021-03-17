@@ -8,14 +8,7 @@
     <title>나의 포트폴리오</title>
     <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./style.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- <link rel="stylesheet" href="../satner-master/vendors/linericon/style.css"> -->
-    <!-- <link rel="stylesheet" href="../satner-master/css/font-awesome.min.css"> -->
-    <!-- <link rel="stylesheet" href="../satner-master/vendors/owl-carousel/owl.carousel.min.css"> -->
-    <!-- <link rel="stylesheet" href="../satner-master/css/magnific-popup.css"> -->
-    <!-- <link rel="stylesheet" href="../satner-master/vendors/nice-select/css/nice-select.css"> -->
 </head>
 
 <body>
@@ -24,7 +17,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <a class="home_logo" href="index.html">
-                        <h3 class="text-uppercase" id="subject_logo">작품</h3>
+                        <img src='image/portfolio.png' />
                     </a>
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav justify-content-end">
@@ -52,45 +45,35 @@
             </nav>
         </div>
     </header>
-    <!--================Start Portfolio Details Area =================-->
-    <section class="portfolio_details_area section_gap">
+    <section class="section_gap">
         <div class="container">
-            <div class="portfolio_details_inner">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="left_img">
-                            <img class="img-fluid" src="" alt="" id="left_img">
-                        </div>
-                    </div>
-                    <div class="offset-lg-1 col-lg-5">
-                        <div class="portfolio_right_text mt-30">
-                            <h1 class="text-uppercase" id="title"></h1>
-                            <br><br>
-                            <p id="contents">
-                            </p>
-                            <ul class="list">
-                                <li><span>개발환경</span>:&nbsp;<span id="dev_env"></span></li>
-                                <li><span>개발언어</span>:&nbsp;<span id="dev_lang"></span></li>
-                                <li><span>서버</span>:&nbsp;<span id="dev_server"></span></li>
-                                <li><span>내용</span> </li>
-                                <p id="sub_contents"></p>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="row">
+                <table class="table table-striped">
+                    <thread>
+                        <tr>
+                            <th colspan="2">자유 게시판</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="글 제목" name="board_title"
+                                    maxlength="50" id="i_text_title"></td>
+                        </tr>
+                        <tr>
+                            <td><textarea class="form-control" placeholder="글 내용" name="board_content"
+                                    maxlength="2048" id="i_text_content"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="align-self-end ml-auto">
+                    <input type="submit" class="btn btn-primary" id="i_write_bt" value="글수정"></a>
                 </div>
-                <h2 class="test-title">시연 영상</h2>
-                <div class="row justify-content-center" id="video_container">
-                </div>
-                <input type="file" name="upfile" id="upfile">
-                <br>
-                <button onclick="uploadFile();" id="i_upload_btn">동영상 올리기</button>
             </div>
         </div>
     </section>
-    <!--================End Portfolio Details Area =================-->
+
     <script src="./js/util.js"></script>
-    <script src="./js/portfolio.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/board_update.js"></script>
 </body>
 
 </html>

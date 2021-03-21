@@ -922,3 +922,16 @@ button {
 #i_view_date_1, #i_view_date_2, #i_view_content_1{
   text-align: center;
 }
+#w3-bar {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.w3-button {
+  margin-right: 50px;
+}
+
+#self-page {
+  margin-right: 50px;
+  color: red;
+}

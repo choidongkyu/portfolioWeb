@@ -40,13 +40,9 @@
         }
 
         //게시글 리스트를 받아오는 메소드
-        public function getList($pageNumber){
-
-            //board id 기준으로 내림차순으로 정렬 후 최대 10개만 리스트 가져옴
-            //$limit_num = $this->getNext() - ($pageNumber-1) * 10; //추후 페이징 처리할때 추가
-            //$sql = "select * from t_board where board_id < '$limit_num' and board_available = 1 order by board_id desc LIMIT 10";
-
-            $sql = "select * from t_board where board_available = 1 order by board_id desc";
+        public function getList($start){
+            $list_number = 5; // 한 페이지에 존재하는 게시판 수
+            $sql = "select * from t_board order by board_id desc limit $start, $list_number";
             $res = $this->db->query($sql);
             while($row = mysqli_fetch_assoc($res)) {
                 $list["user"][] = $row;
@@ -90,7 +86,7 @@
     }
 
     // $board = new Board();
-    // echo $board->delete(3);
+    // echo $board->getList(0);
 
 
 
@@ -146,9 +142,9 @@
     if(isset($_GET['request'])) {
         //리스트 요청을 햇을 경우
         if($_GET['request'] == "get_list") {
-            $page_number = $_GET['page_number'];
+            $start = $_GET['start'];
             $board = new Board();
-            $list = $board->getList($page_number);
+            $list = $board->getList($start);
             echo json_encode($list);
         }
 

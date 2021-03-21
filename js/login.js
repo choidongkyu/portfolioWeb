@@ -25,6 +25,11 @@ $("#i_login_btn").click(async () => {
     if (result['retCode'] == -1) {
         alert("로그인 정보가 올바르지 않습니다.")
     } else {
-        location.href = "index.html"
+        if(location.pathname == "/popup.html") {
+            opener.document.location.href="index.html"
+            self.close();
+        }else {
+            location.href = "index.html"
+        }
     }
 })

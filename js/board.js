@@ -1,19 +1,18 @@
-//기본적으로 페이지는 1
-let page_number = 1;
+let start = 0;
 
 //url로 pagenumber가 넘어 왔다면
-if (getParameterByName("pagenumber")) {
-    page_number = parseInt(getParameterByName("pagenumber")); //문자열을 정수형으로 변환
+if (getParameterByName("start")) {
+    start = parseInt(getParameterByName("start")); //문자열을 정수형으로 변환
 }
 
-async function getNext(page_number) {
+async function getNext(start) {
     //게시글 목록 가져옴
     //서버에 게시글 등록 요청
     const ajax_url = "/backend/board.php";
     const ajax_type = "GET";
     const ajax_data = {
         request: "get_next",
-        page_number: page_number
+        start: start
     };
 
     //비동기 처리 위해 await 사용, 데이터 수신
@@ -27,14 +26,14 @@ async function getNext(page_number) {
 }
 
 
-async function getList(page_number) {
+async function getList(start) {
     //게시글 목록 가져옴
     //서버에 게시글 등록 요청
     const ajax_url = "/backend/board.php";
     const ajax_type = "GET";
     const ajax_data = {
         request: "get_list",
-        page_number: page_number
+        start: start
     };
 
     //비동기 처리 위해 await 사용, 데이터 수신
@@ -67,4 +66,4 @@ async function getList(page_number) {
 }
 
 //리스트를 얻어온후 html에 뿌려줌
-getList(page_number);
+getList(start);

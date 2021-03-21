@@ -35,7 +35,7 @@ $("#i_write_bt").click(async () => {
         alert("게시글 등록이 실패 하였습니다.");
     } else {
         alert("게시글이 정상적으로 등록되었습니다.");
-        location.href = "board.html"
+        location.href = "board.php"
     }
 
 })

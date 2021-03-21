@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>로그인</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="section_gap">
+        <div class="login-form">
+            <input type="text" name="id" class="text-field" placeholder="아이디" id="i_login_id">
+            <input type="password" name="password" class="text-field" placeholder="비밀번호" id="i_login_pw">
+            <button type="input" name="button" class="login-btn" id="i_login_btn" tabindex="0">
+                로그인
+            </button>
+
+            <div class="links">
+                <a href="signup.html">회원가입</a>
+            </div>
+        </div>
+    </section>
+    <form name="notice_form">
+        <div id="divpop1" class="divpop">
+            <div class="button_area">
+                <input type='checkbox' name='chkbox' id='todaycloseyn' value='Y'>오늘 하루 이 창을 열지 않음
+                <a href='#' onclick="javascript:closeWin(1);"><B>[닫기]</B></a>
+            </div>
+        </div>
+    </form>
+
+    <script src="./js/util.js"></script>
+    <script src="./js/login.js"></script>
+    <script>
+        //팝업창 닫기 버튼 클릭시
+        function closeWin(key) {
+            if ($("#todaycloseyn").prop("checked")) {
+                setCookie('divpop' + key, 'Y', 1);
+            }
+            self.close();
+        }
+    </script>
+</body>
+
+</html>

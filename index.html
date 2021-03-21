@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>나의 포트폴리오</title>
+	<title>포트폴리오</title>
 	<link rel="stylesheet" href="./bootstrap.css">
 	<link rel="stylesheet" href="./style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -35,7 +35,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="board.html">자유게시판</a></li>
+							<li class="nav-item"><a class="nav-link" href="board.php">자유게시판</a></li>
 							<li class="nav-item"><a class="nav-link" href="https://github.com/choidongkyu">MY GITHUB</a>
 							<li class="nav-item"><a class="nav-link" id="i_login_menu" href="login.html">로그인</a>
 							</li>
@@ -204,6 +204,22 @@
 
 	</section>
 	<script src="./js/util.js"></script>
+	<script>
+		function popup() {
+			var url = "popup.html";
+			var name = "로그인";
+			var option = "width = 500, height = 500, top = 100, left = 200, location = no"
+			window.open(url, name, option);
+		}
+		(async function () {
+			var user = await getUser();
+			console.log(user);
+			//오늘하루 그만보기가 안되어 있거나 비회원인 경우 popup창 띄우기
+			if (getCookie("divpop1") != "Y" && user == "null") {
+				popup();
+			}
+		})()
+	</script>
 </body>
 
 </html>

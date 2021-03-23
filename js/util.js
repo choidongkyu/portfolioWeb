@@ -51,6 +51,15 @@ async function getSession() {
     $("#i_login_menu").text("로그인");
     $("#i_login_menu").attr("href", "login.html");
   }
+
+  //관리자일 경우 방송하기 기능 생성
+  if(result['user'] == 'super') {
+    $("#i_braodcast").text("방송하기");
+    $("#i_braodcast").attr("href", "http://localhost:5000/index.html");
+  } else {
+    $("#i_braodcast").text("방송보기");
+    $("#i_braodcast").attr("href", "http://localhost:5000/viewer.html");
+  }
 }
 //관리자 계정인지 확인하는 메소드
 async function getUser() {

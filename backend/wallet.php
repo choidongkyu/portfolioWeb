@@ -10,7 +10,7 @@
         
         //세션이 존재한다면
         if(isset($_SESSION['username'])) {
-            $id = $_SESSION['username'];//로그인된 id값
+            $id = $_GET['user'];//로그인된 id값
             if($id == "") { //세션값이 비어있다면 null 반환
                 $result['wallet'] = 'null';    
             } else {
@@ -36,11 +36,7 @@
         $price = $_POST['wallet'];
         $id = $_POST['user'];
         
-        if($db) { //데이터베이스가 존재한다면 해당 id의 보유금액 조회
-            $sql = "select star from t_user where id='$id'"; 
-            $res = $db->query($sql);
-            $data = mysqli_fetch_assoc($res);
-            $price = $data['star'] + $price;
+        if($db) {
             $sql = "update t_user set star = '$price' where id='$id'";
             $res = $db->query($sql);
             if($res) {

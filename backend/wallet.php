@@ -28,6 +28,32 @@
         mysqli_close($db);
     }
 
+    if(isset($_GET['wallet'])){
+        header('Cache-Control:no-cache');
+        header('Pragma:no-cache');
+        header('Content-Type:text/html; charset=utf-8');
+        $db = mysqli_connect("127.0.0.1", "root", "Ddr7979556!", "portfolio");
+        
+        //세션이 존재한다면
+        if(isset($_SESSION['username'])) {
+            $id = $_GET['user'];//로그인된 id값
+            if($id == "") { //세션값이 비어있다면 null 반환
+                $result['wallet'] = 'null';    
+            } else {
+                if($db) { //데이터베이스가 존재한다면 해당 id의 보유금액 조회
+                    $sql = "select star from t_user where id='$id'"; 
+                    $res = $db->query($sql);
+                    $data = mysqli_fetch_assoc($res);
+                    $result['wallet'] = $data['star'];
+                }
+            }  
+        } else {
+            $result['wallet'] = 'null';
+        }
+        echo json_encode($result);
+        mysqli_close($db);
+    }
+
     if(isset($_POST['wallet'])){
         header('Cache-Control:no-cache');
         header('Pragma:no-cache');

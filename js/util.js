@@ -56,6 +56,8 @@ async function getSession() {
   if(result['user'] == 'super') {
     $("#i_braodcast").text("방송하기");
     $("#i_braodcast").attr("href", "http://localhost:5000/index.html");
+    $("#i_manage").text("관리자페이지");
+    $("#i_manage").attr("href", "manager.php");
   } else {
     $("#i_braodcast").text("방송보기");
     $("#i_braodcast").attr("href", "http://localhost:5000/viewer.html");
@@ -120,6 +122,21 @@ function getCookie(name) {
     if (x == 0) break;
   }
   return "";
+}
+
+async function getWallet(user) {
+  //session이 존재하는지 서버에 요청
+  const ajax_url = "/backend/wallet.php";
+  const ajax_type = "GET";
+  const ajax_data = {
+      wallet: "wallet",
+      user: user
+  };
+
+  //비동기 처리 위해 await 사용, 데이터 수신
+  var result = await nv_ajax(ajax_url, ajax_type, ajax_data);
+  //관리자인 경우 result가 super로 옴
+  return result['wallet'];
 }
 
 //모든 페이지 마다 session 값을 얻어야 하므로 util.js에서 실행 시킴

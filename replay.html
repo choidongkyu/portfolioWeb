@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="home_logo" href="index.html">
+                        <img src='image/portfolio.png' />
+                    </a>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav justify-content-end">
+                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" id="i_braodcast" href="http://localhost:5000/viewer.html">방송보기</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">포트폴리오</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="portfolio.html?subject=java">Java</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="portfolio.html?subject=android">Android</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="portfolio.html?subject=php">PHP</a>
+                                    <li class="nav-item"><a class="nav-link" href="replay.html">방송 다시보기</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="board.php">자유게시판</a></li>
+                            <li class="nav-item"><a class="nav-link" id="i_manage" href="https://github.com/choidongkyu">MY GITHUB</a>
+                            <li class="nav-item"><a class="nav-link" id="i_login_menu" href="login.html">로그인</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <h2 class="test-title">이전 방송 다시보기</h2>
+                <div class="row justify-content-center" id="video_container">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Portfolio Details Area =================-->
+    <script src="./js/util.js"></script>
+    <script src="./js/replay.js"></script>
+</body>
+
+</html>

@@ -114,6 +114,7 @@ function uploadFile() {
     var filedata = new FormData(); // FormData 인스턴스 생성
 
     filedata.append('upfile', file.files[0]);
+    console.log(typeof(file.files[0]));
 
     var _xml = new XMLHttpRequest();
     _xml.open('POST', '/backend/upload.php?subject=' + subject, true);

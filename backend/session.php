@@ -6,7 +6,7 @@
         if(isset($_SESSION['username'])) {
             $result['user'] = $_SESSION['username'];
             if($result['user'] == ""){ //세션값이 비어있다면 null 반환
-                $result['user'] = 'null';    
+                $result['user'] = 'null';   
             }
         }else {
             $result['user'] = 'null';

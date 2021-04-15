@@ -911,17 +911,24 @@ button {
 #i_view_content_2 {
   height: 200px;
   text-align: left;
-  
+
 }
 
 .btn-primary {
   margin-right: 20px;
 }
 
-#i_free_board, #i_view_title_1, #i_view_title_2, #i_view_user_1, #i_view_user_2,
-#i_view_date_1, #i_view_date_2, #i_view_content_1{
+#i_free_board,
+#i_view_title_1,
+#i_view_title_2,
+#i_view_user_1,
+#i_view_user_2,
+#i_view_date_1,
+#i_view_date_2,
+#i_view_content_1 {
   text-align: center;
 }
+
 #w3-bar {
   text-align: center;
   padding: 50px 20px;
@@ -935,3 +942,8 @@ button {
   margin-right: 50px;
   color: red;
 }
+
+#i_spon_price {
+  font-size: 40px;
+}
+

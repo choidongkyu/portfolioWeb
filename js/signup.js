@@ -30,7 +30,7 @@ async function signUpRequest(ajax_data) {
             }
         })
     } else {
-        swal("회원가입이 실패하였습니다. 네트워크를 확인해 주세요.");
+        swal("회원가입이 실패하였습니다. 네트워크를 확인해 주세요. retcode" + result["retCode"]);
     }
 }
 

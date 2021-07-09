@@ -8,7 +8,7 @@
         //mysql 연결
         $db = mysqli_connect("127.0.0.1", "root", "Ddr7979556!", "portfolio");
         if($db) {
-             $sql = "insert into t_user (id, email, password, super) values ('$id', '$email', '$password', 0)";
+             $sql = "insert into t_user (id, email, password, super, star) values ('$id', '$email', '$password', 0, 0)";
              $res = $db->query($sql);
              //정상적으로 데이터베이스가 생성 될 경우
              if($res) {
